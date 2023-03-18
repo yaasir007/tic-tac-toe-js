@@ -47,7 +47,6 @@ function checkScore() {
   const allCells = document.querySelectorAll(".cell");
 
   winningCombo.forEach(array => {
-
     let winCirle = array.every((cell) =>
       allCells[cell].firstChild?.classList.contains("circle")
     );
@@ -66,6 +65,5 @@ function checkScore() {
       scoreElement.textContent = "Cross Wins";
       allCells.forEach((cell) => cell.removeEventListener("click", addGo));
     }
-
   })
 }
