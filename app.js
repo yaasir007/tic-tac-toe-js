@@ -1,6 +1,6 @@
-// const ticGame = document.querySelector(".tic-game");
-// const scoreElement = document.querySelector(".score");
-// const cells = ["", "", "", "", "", "", "", "", ""];
+const ticGame = document.querySelector(".tic-game");
+const scoreElement = document.querySelector(".score");
+const cells = ["", "", "", "", "", "", "", "", ""];
 
 // let go = "cross";
 // scoreElement.textContent = `Let the game begin`;
