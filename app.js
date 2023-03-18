@@ -2,18 +2,18 @@ const ticGame = document.querySelector(".tic-game");
 const scoreElement = document.querySelector(".score");
 const cells = ["", "", "", "", "", "", "", "", ""];
 
-// let go = "cross";
-// scoreElement.textContent = `Let the game begin`;
+let go = "cross";
+scoreElement.textContent = `Let the game begin`;
 
-// function createBoard() {
-//   cells.forEach((cell, index) => {
-//     const cellElement = document.createElement("div");
-//     cellElement.classList.add("cell");
-//     cellElement.id = index;
-//     cellElement.addEventListener('click', addGo);
-//     ticGame.append(cellElement);
-//   });
-// }
+function createBoard() {
+  cells.forEach((cell, index) => {
+    const cellElement = document.createElement("div");
+    cellElement.classList.add("cell");
+    cellElement.id = index;
+    cellElement.addEventListener('click', addGo);
+    ticGame.append(cellElement);
+  });
+}
 
 // createBoard();
 
