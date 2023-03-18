@@ -15,17 +15,17 @@ function createBoard() {
   });
 }
 
-// createBoard();
+createBoard();
 
-// function addGo(e) {
-//   const action = document.createElement('div');
-//   action.classList.add(go);
-//   e.target.append(action);
-//   if (go == "cross") {
-//     go = "circle";
-//   } else {
-//     go = "cross";
-//   }
+function addGo(e) {
+  const action = document.createElement('div');
+  action.classList.add(go);
+  e.target.append(action);
+  if (go == "cross") {
+    go = "circle";
+  } else {
+    go = "cross";
+  }
 
 //   e.target.removeEventListener("click", addGo); //play only once per cell
 //   scoreElement.textContent = `It is ${go}'s turn.`;
