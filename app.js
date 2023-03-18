@@ -44,28 +44,28 @@ function checkScore() {
     [2,4,6]
   ];
 
-//   const allCells = document.querySelectorAll(".cell");
+  const allCells = document.querySelectorAll(".cell");
 
-//   winningCombo.forEach(array => {
+  winningCombo.forEach(array => {
 
-//     let winCirle = array.every((cell) =>
-//       allCells[cell].firstChild?.classList.contains("circle")
-//     );
+    let winCirle = array.every((cell) =>
+      allCells[cell].firstChild?.classList.contains("circle")
+    );
 
-//     let winCross = array.every((cell) =>
-//       allCells[cell].firstChild?.classList.contains("cross")
-//     );
+    let winCross = array.every((cell) =>
+      allCells[cell].firstChild?.classList.contains("cross")
+    );
 
-//     if (winCirle) {
-//       scoreElement.textContent = "Circle Wins";
-//       // allCells.forEach(cell => cell.removeEventListener('click', addGo))
-//       allCells.forEach(cell => cell.replaceWith(cell.cloneNode(true))) //it will do the same thing as remove the listener off the cells.
-//     }
+    if (winCirle) {
+      scoreElement.textContent = "Circle Wins";
+      // allCells.forEach(cell => cell.removeEventListener('click', addGo))
+      allCells.forEach(cell => cell.replaceWith(cell.cloneNode(true))) //it will do the same thing as remove the listener off the cells.
+    }
 
-//     if (winCross) {
-//       scoreElement.textContent = "Cross Wins";
-//       allCells.forEach((cell) => cell.removeEventListener("click", addGo));
-//     }
+    if (winCross) {
+      scoreElement.textContent = "Cross Wins";
+      allCells.forEach((cell) => cell.removeEventListener("click", addGo));
+    }
 
-//   })
-// }
+  })
+}
