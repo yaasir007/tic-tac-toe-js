@@ -1,7 +1,9 @@
 const ticGame = document.querySelector(".tic-game");
+const scoreElement = document.querySelector(".score");
 const cells = ["", "", "", "", "", "", "", "", ""];
 
 let go = "cross";
+scoreElement.textContent = `Let the game begin`;
 
 function createBoard() {
   cells.forEach((cell, index) => {
@@ -26,6 +28,7 @@ function addGo(e) {
   }
 
   e.target.removeEventListener("click", addGo); //play only once per cell
+  scoreElement.textContent = `It is ${go}'s turn.`;
   checkScore();
 }
 
@@ -40,5 +43,29 @@ function checkScore() {
     [0,4,8],
     [2,4,6]
   ];
-  
+
+  const allCells = document.querySelectorAll(".cell");
+
+  winningCombo.forEach(array => {
+
+    let winCirle = array.every((cell) =>
+      allCells[cell].firstChild?.classList.contains("circle")
+    );
+
+    let winCross = array.every((cell) =>
+      allCells[cell].firstChild?.classList.contains("cross")
+    );
+
+    if (winCirle) {
+      scoreElement.textContent = "Circle Wins";
+      // allCells.forEach(cell => cell.removeEventListener('click', addGo))
+      allCells.forEach(cell => cell.replaceWith(cell.cloneNode(true))) //it will do the same thing as remove the listener off the cells.
+    }
+
+    if (winCross) {
+      scoreElement.textContent = "Cross Wins";
+      allCells.forEach((cell) => cell.removeEventListener("click", addGo));
+    }
+
+  })
 }
