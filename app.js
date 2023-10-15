@@ -1,5 +1,6 @@
 const ticGame = document.querySelector(".tic-game");
 const scoreElement = document.querySelector(".score");
+const btn = document.querySelector(".btn");
 const cells = ["", "", "", "", "", "", "", "", ""];
 
 let go = "cross";
@@ -67,3 +68,7 @@ function checkScore() {
     }
   })
 }
+
+btn.addEventListener('click', () => {
+  location.reload();
+})
