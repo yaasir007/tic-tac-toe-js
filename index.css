@@ -11,7 +11,7 @@
   flex-direction: column;
   gap: 1.5rem;
   height: 100vh;
-  background-color: lightslategrey;
+  background-color: #1d244b;
 }
 
 .tic-game {
@@ -70,38 +70,5 @@
   font-size: 1.5rem;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-style: oblique;
-}
-
-.btn {
-  background: #FF4742;
-  border-radius: 6px;
-  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
-  font-size: 16px;
-  font-weight: 800;
-  line-height: 16px;
-  min-height: 40px;
-  outline: 0;
-  padding: 12px 14px;
-  text-align: center;
-  text-rendering: geometricprecision;
-  text-transform: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-  transition: all .2s linear;
-}
-
-.btn:hover,
-.btn:active {
-  background-color: black;
-}
-
-.btn:active {
-  opacity: .5;
+  color: white;
 }
